@@ -1,0 +1,68 @@
+.login-inicio {
+
+        padding-top: 65px;
+        padding-bottom: 65px;
+
+}
+
+.login {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 10rem;
+}
+
+.form-container, .form-container-login {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px;
+        width: 65rem;
+}
+
+h2 {
+        text-align: center;
+}
+
+
+.form-group {
+        margin-bottom: 15px;
+}
+
+label {
+        display: block;
+        margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+}
+
+
+.form-container-login {
+        
+    padding-bottom: 65px; 
+    padding-top: 65px;   
+
+}
+
+@media(max-width: 810px){.login {display:inline;}
+
+        
+
+.form-container, .form-container-login{
+        width: auto;
+        }
+}
+
+.registros{
+        background-color: aquamarine;
+        display: flex;
+        text-align: center;
+}
