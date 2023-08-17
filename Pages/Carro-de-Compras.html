@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href=".././assets/Img/logo.png">
-    <link rel="stylesheet" href="../../Styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="../Css/main.css">
-   <title>Trimac M&H</title>
-</head>
-<body>
-
-    <header>
-      <nav style="background-color: #5577ee;" class="navbar navbar-expand-lg">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="Trimac">
+   <meta name="descriptionc" content="Esta es la mejor pagina para comprar tus herramientas">
+   <meta name="keywords" content="Comprar, herramientas, taladros">
+   <meta name="author" content="Facundo S. Roca"/>
+   <meta name="copyright" content="Trimac"/>
+   <meta property="og:title" content="Compra tu herramienta" />
+   <meta property="og:description" content="Compra tu herramienta para el hogar, industria u oficio" />
+<meta property="og:image" content="./assets/Img/logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_ES"/>
+<meta property="og:locale:alternate" content="us_US" />
+<nav style="background-color: #5577ee;" class="navbar navbar-expand-lg">
          <div class="container-fluid">
             <a class="navbar-brand" href="../index.html"><img class="logo" src="../assets/Img/logo.png" alt="Logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,6 +38,7 @@
                   <li class="nav-item">
                      <a class="nav-link" href="../Pages/Nosotros.html">Nosotros</a>
                   </li>
+                  
                   <li class="nav-item dropdown">
                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -45,7 +46,7 @@
                      </a>
                      <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="../Pages/Catalogo.html">Herramientas</a></li>
-                        <li><a class="dropdown-item" href="../Pages/Catalogo.html">Hogar, mueble y jardin</a></li>
+                        <li><a class="dropdown-item" href="../Pages/Catalogo.html">Herramientas</a></li>
 
                      </ul>
                   </li>
@@ -55,24 +56,157 @@
                </ul>
                <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                  <button class="btn btn-outline-light" type="submit">Buscar</button>
+                  <button id="buscar" class="btn btn-outline-light" type="submit">Buscar</button>
                </form>
+               
+               <div class="col-3 d-flex align-items-center justify-content-end">
+
+                  <a   
+                      
+                      class="cart position-relative d-inline-flex" 
+                      aria-label="View your shopping cart"
+                      data-bs-toggle="offcanvas" 
+                      data-bs-target="#offcanvasRight" 
+                      aria-controls="offcanvasRight">
+  
+                      <i class="fa-solid fa-cart-shopping position-relative" id="iconoCarrito">
+                          <span class="position-absolute 
+                                       top-0 
+                                       start-100 
+                                       translate-middle 
+                                       badge 
+                                       rounded-pill 
+                                       bg-danger"
+                                       
+                                       id="badgeCarrito">
+                                  0
+                          </span>
+                      </i>
+  
+                  </a>
+  
+              </div>
+  
+          </div>
+  
             </div>
          </div>
       </nav>
-     </header>
+   
+   <link rel="icon" type="../assets/Img/logo.png" href="../assets/Img/logo.png">
+   <link rel="icon" href="../assets/Img/logo.png">
+
+   <link rel="stylesheet" href="../Css/main.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- Bootstrap 5.2.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Sweet Alert 2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.17/sweetalert2.min.css" integrity="sha512-CJ5goVzT/8VLx0FE2KJwDxA7C6gVMkIGKDx31a84D7P4V3lOVJlGUhC2mEqmMHOFotYv4O0nqAOD0sEzsaLMBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"> 
+      <title>Trimac M&H</title>
+</head>
+<body>
+
+
+               <a   
+                   
+                   class="cart position-relative d-inline-flex" 
+                   aria-label="View your shopping cart"
+                   data-bs-toggle="offcanvas" 
+                   data-bs-target="#offcanvasRight" 
+                   aria-controls="offcanvasRight">
+
+                   <i class="fa-solid fa-cart-shopping position-relative" id="iconoCarrito">
+                       <span class="position-absolute 
+                                    top-0 
+                                    start-100 
+                                    translate-middle 
+                                    badge 
+                                    rounded-pill 
+                                    bg-danger"
+                                    
+                                    id="badgeCarrito">
+                               0
+                       </span>
+                   </i>
+
+               </a>
+
+           </div>
+
+       </div>
+
+   </header>    
+
+   <div class="main">
+
+                    
+               
+               <div id="productos">
+               </div>            
+              
+
+           </div>
+
+       </div>
+
+    
+       <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+           <div class="offcanvas-header">
+               <h5 id="offcanvasRightLabel">Tu pedido</h5>
+               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+           </div>
+           <div class="offcanvas-body">
+
+               <div id="idCarrito">
+               
+                   <div class="row">
+
+                       <div class="col"></div>
+                       <div class="col">Nombre</div>
+                       <div class="col">Precio</div>
+                       <div class="col">Cantidad</div>
+                       <div class="col"></div>
+
+                   </div>
+
+               </div>
+
+           </div>
+       </div>    
+      
+
    
     <footer>
       <div>
-         <div class="footer"><img class="logo-footer" src="../assets/Img/logo.png" alt="Logo"></a>
+         <div class="footer"><img class="logo-footer" src="../assets/Img/logo.png" alt="logo"></a>
          </div>
 
          <p>Tel (11) 36117941 </p>
          <p>morettipe2010@hotmail.com</p>
          <p>Piedras 626 Monserrat Capital Federal</p>
       </div>
+
+
      
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+      integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+      integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+      crossorigin="anonymous"></script>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <script src="assets/js/clases/Producto.js"></script>
+    <script src="assets/js/clases/BuscadorProductos.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 

@@ -1,77 +1,69 @@
+let carrito = [] ;
+let productos =new Array () ;
 
-function mostrarMenu() {
-    let opcion =  prompt ("1. Producto \n 2. Random \n 3. Filtrar \n 4. Salir");
-    return opcion;
-}
+let gestor ;
 
-function menuPrincipal() {
-    var opcion;
-  
-    do {
-     
-      opcion = mostrarMenu();
-  
-      switch (opcion) {
-        case "1":
-          mostrarHerramientas();
-          break;
-        case "2":
-          obtenerHerramientaAleatoria();
-          break;
-        case "3":
-          filtrar();
-          break;
-          case "4":
-          alert("¡Gracias por visitarnos!");
-          break;
-        default:
-          alert("Opción inválida.");
-          break;
-      }
-    } while (opcion !== "3");
-  
+
+const key_carrito = "carrito";
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+
     
-    }
+    carrito = JSON.parse(localStorage.getItem(key_carrito)) || [] ;
+
+    gestor = new GestionarProductos() ;
+    gestor.iniciar();
 
 
-    function mostrarHerramientas(){
-        let text = "Herramientas\n";
-        for (var i = 0; i < herramientas.length; i++) {
-        text +="-"+herramientas[i].getDatos()+"\n";
-    }
-        alert (text);
-        
-    }
-
-    function obtenerHerramientaAleatoria() {
-        var indiceAleatorio = Math.floor(Math.random() * herramientas.length);
-        var herramientaAleatoria = herramientas[indiceAleatorio];
-        alert ("Herramienta aleatoria seleccionada: " + herramientaAleatoria.getDatos());
-      }
-
-      function filtrar (){
-        let tipo = prompt ("ingrese tipo de herramientas \n electrica \n manual");
-        if (tipo == "electrica"|| tipo == "manual" ){ 
-            let herramientaSelecionada = herramientas.filter(her=>her.getTipo()===tipo);
-            let text = "herramientas Selecionadas\n";
-            for (var i = 0; i < herramientaSelecionada.length; i++) {
-            text +="-"+herramientaSelecionada[i].getDatos()+"\n";
-            
-            }
-            alert (text);
-        } else{ 
-            alert ("opcion incorrecta");
-            menuPrincipal();
-
-        }
-        
-    }
+})
 
 
 
-    menuPrincipal();
+document.querySelector("#buscar").addEventListener("keyup",()=>{
 
 
+   let q = document.querySelector("#buscar").value ;
+
+   if (q.length >= 2){
+
+    gestor.buscar(q);
+
+
+
+   }else{
+
+    gestor.mostrarHeader("Todos los productos en stock");
+    gestor.cargarProductos(productos);
+
+
+   }
+
+
+
+
+
+
+})
+
+
+
+function addCarrito(id){
+
+    const prod = document.querySelector("#row_"+id);
+
+    let titulo = prod.querySelector('h3').textContent;
+    let precio = prod.querySelector(".precio").textContent;
+    let img =  prod.querySelector("img").src;
+
+    let producto = new Producto (id,titulo,precio,img);
+
+    gestor.addCart(producto);
+
+
+
+
+}
 
 
 

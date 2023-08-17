@@ -106,6 +106,7 @@ function generarUsuario(){
 
     nuevo_usuario.push(usuario); 
     localStorage.setItem("usarioRegistrado",JSON.stringify(nuevo_usuario));
+    
 
 }
 
@@ -134,18 +135,20 @@ function login(){
   const validaPassword = validaUsuario.contraseña === input_password;
   if (validaUsuario && validaPassword)
   {
-    errorLogin.innerHTML = "Bienvenido " + input_nombre; 
+ innerHTML =  Swal.fire('Bienvenido  ' + input_nombre),
     console.log("verdadero")
+   
+
   } 
   else {
-    errorLogin.innerHTML = "Usuario o Password Incorrecto"
-  console.log("fasle")}
+    innerHTML =  Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Usuario o password Incorrecto',
+      footer: 'Vuelva a intentarlo'
+    })
+  console.log("fasle")
+ 
 }
 
-
-
-
-
-
-
-
+}
