@@ -1,0 +1,234 @@
+.logo-footer {
+  width: 10rem;
+}
+
+footer {
+  background-color: #5577ee;
+  margin-top: 3rem;
+  padding: 1rem;
+  display: flex;
+}
+
+.logo {
+  width: 15rem;
+}
+
+footer {
+  background-color: #5577ee;
+  margin-top: 3rem;
+  padding: 1rem;
+  display: flex;
+}
+
+.buscar {
+  width: 55rem;
+  font-size: 1.2em;
+  padding: 1em;
+  border: 2px solid #ccc;
+  border-radius: 1px;
+  flex: 1;
+}
+
+.data-bs-target {
+  color: #000000;
+}
+
+.carousel-item {
+  padding: 2rem;
+  background-image: url("../assets/Img/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 30rem;
+  color: white;
+  text-align: center;
+}
+
+.carousel-control-prev-icon {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-transform: none;
+}
+
+.carousel-control-next-icon {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-transform: none;
+}
+
+.visually-hidden {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  text-transform: none;
+}
+
+.embed-responsive {
+  display: flex;
+  justify-content: center;
+}
+
+.oficial {
+  color: #af3131;
+}
+
+.formulario {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: auto;
+  width: 60rem;
+}
+
+.login-inicio {
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin: 10rem;
+}
+
+.form-container, .form-container-login {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  width: 65rem;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-container-login {
+  padding-bottom: 65px;
+  padding-top: 65px;
+}
+
+@media (max-width: 810px) {
+  .login {
+    display: inline;
+  }
+  .form-container, .form-container-login {
+    width: auto;
+  }
+}
+.registros {
+  background-color: aquamarine;
+  display: flex;
+  text-align: center;
+}
+
+.comprar {
+  width: 60%;
+  margin: 2rem;
+  text-align: justify;
+  visibility: hidden;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+  grid-auto-flow: row;
+  gap: 30px 30px;
+  grid-template-areas: "Prod1 Prod2 Prod3" "Prod4 Prod5 Prod6" "Prod7 Prod8 Prod9";
+}
+
+.Prod1 {
+  grid-area: Prod1;
+  margin-bottom: 2rem;
+}
+
+.Prod2 {
+  grid-area: Prod2;
+}
+
+.Prod3 {
+  grid-area: Prod3;
+}
+
+.Prod4 {
+  grid-area: Prod4;
+}
+
+.Prod5 {
+  grid-area: Prod5;
+}
+
+.Prod6 {
+  grid-area: Prod6;
+}
+
+.Prod7 {
+  grid-area: Prod7;
+}
+
+.Prod8 {
+  grid-area: Prod8;
+}
+
+.Prod9 {
+  grid-area: Prod9;
+}
+
+.fondoProducto {
+  transition: 0.4s;
+}
+
+.fondoProducto:hover {
+  background-color: #48d2e4;
+}
+
+@media (max-width: 950px) {
+  .video {
+    width: 480px;
+  }
+}
+@media (max-width: 950px) {
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11% 11%;
+    grid-auto-flow: row;
+    grid-template-areas: "Prod1" "Prod2" "Prod3" "Prod4" "Prod5" "Prod6" "Prod7" "Prod8" "Prod9";
+  }
+}
+.nosotros {
+  width: 60%;
+  margin: 2rem;
+  text-align: justify;
+}
+
+.nosotros h1 {
+  margin: 2rem;
+  text-align: left;
+}
+
+.nosotrosMain {
+  height: 30rem;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../3entrega js"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Mi_proyecto_3_pre_entrega"
+	}
+}
